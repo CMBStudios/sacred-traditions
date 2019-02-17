@@ -1,0 +1,45 @@
+{
+  "name": "sacred-traditions",
+  "version": "1.0.3",
+  "description": "Sacred Traditions Website",
+  "author": "Chad Jones",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "NODE_ENV='production' STATIC=true nuxt generate --verbose",
+    "deploy": "npm run generate && push-dir --dir=dist --branch=gh-pages --cleanup --verbose",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^4.5.2",
+    "ajv": "^6.6.2",
+    "base62": "^2.0.0",
+    "bootstrap": "^3.4.0",
+    "bootstrap-vue": "^2.0.0-beta",
+    "firebase": "^5.7.2",
+    "jquery": "^3.3.1",
+    "nuxt": "^2.4.3",
+    "nuxtent": "^1.4.1",
+    "object-fit-images": "^3.2.4"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "prismjs": "^1.13.0",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "nuxt-purgecss": "^0.2.1",
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9",
+    "prettier": "^1.14.3",
+    "push-dir": "^0.4.1",
+    "sass-loader": "^7.1.0"
+  }
+}
